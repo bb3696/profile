@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  /*background: linear-gradient(135deg, #0d1a26, #1f3b4d);*/
+  color: #eaeaea;
+  transition: background 0.3s ease;
+  /*padding: 80px 40px 40px 40px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  
+}
+
+
+
+
+.top-name {
+  font-family: 'Inter', sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  z-index: 10; /* 确保在其他内容上面 */
+}
+
+.about-me {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.9rem;
+  font-weight: 100;
+  z-index: 10; /* 确保在其他内容上面 */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.layout-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100vw; /* 跨越整个视口宽度 */
+  margin-left: calc(-50vw + 50%);
+
+  background: linear-gradient(135deg, #0d1a26, #1f3b4d);
+
+  padding: 200px 0px 200px 0px; /* 顶部向上扩展 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.layout-container:hover {
+  box-shadow: 0 0 30px rgba(251, 192, 45, 0.3); /* 淡淡金光 */
+}
+
+
+.bio-section {
+  flex: 1;
+  width: 480px;
+  min-width: 480px;
+  max-width: 480px;
+}
+
+
+.bio {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #e0e0e0;
+}
+
+
+.photo-section {
+  user-select: none;     /* 禁止选中头像区域任何内容 */
+  cursor: default;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.avatar-img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+  border: none;
+  transition: transform 0.4s ease;
+}
+
+.avatar-img:hover {
+  transform: scale(1.03) translateY(-4px);
+}
+
+.photo-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.photo-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.photo-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  text-decoration: none;
+  color: #fbc02d;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.photo-links a:hover {
+  color: #ffeb3b;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-section {
+    max-width: 100%;
+  }
+
+  .photo-section {
+    margin-top: 20px;
+  }
+
+  .page-header {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }   
+}
+
+a.static-link {
+color: inherit;             /* 使用父元素的颜色 */
+}
+
+a.static-link:visited,
+a.static-link:hover,
+a.static-link:active {
+  color: inherit;             /* 访问后、悬停时都不变色 */
+  text-decoration: none;
+}

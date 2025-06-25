@@ -1,0 +1,74 @@
+a<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tony Yang - Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body> 
+
+  <div class="layout-container fade-in">
+    <div class="top-name">
+      Tony Yang
+    </div>
+    <div class="about-me" href="/index.html">About</div>
+    <div class="bio-section">
+      
+      <p class="bio">
+        I'm a Full Stack Developer at 
+        <a href="https://www.antra.com" class="static-link" target="_blank" rel="noopener noreferrer">Antra</a>, 
+        with hands-on experience building scalable, user-focused web applications. I specialize in backend development using Java, Spring Boot, and JPA/Hibernate, and create responsive frontends with React and TypeScript.
+      </p>
+      
+      <p class="bio">
+        I've worked across the full development lifecycle—from designing databases in MySQL/PostgreSQL to deploying applications on AWS (EC2, S3, RDS). I also implement CI/CD pipelines using GitHub Actions and Docker to support fast, reliable releases.
+      </p>
+
+      <p class="bio">
+        I take pride in writing clean, testable code that connects robust backend logic with intuitive user interfaces. My goal is to build maintainable, high-performance solutions that solve real-world business problems effectively.
+      </p>
+      <p class="bio">
+        You can find some of my work highlighted 
+        <a href="/project1.html" class="static-link">here</a> 
+        and 
+        <a href="/project2.html" class="static-link">here</a>.
+      </p>
+
+      <div class="social-links">
+
+      </div>
+    </div>
+
+    <div class="photo-section">
+      <img class="avatar-img" src="https://media.licdn.com/dms/image/v2/D4D03AQGHgjh7LBpD5w/profile-displayphoto-shrink_400_400/B4DZY9dRs6GwAk-/0/1744787807337?e=1756339200&v=beta&t=6fVsamGCSYec_I-sQnpb7FZLwqngtS_Fce01LcNd2f8" alt="Tony Yang" />
+      <div class="photo-name">Tony Yang</div>
+      <div class="photo-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth;
+      const angle = Math.round(x * 360);
+      const container = document.querySelector(".layout-container");
+    if (container) {
+      container.style.background = `linear-gradient(${angle}deg, #0d1a26, #1f3b4d)`;
+    }
+    });
+  </script>
+
+  
+</body>
+
+</html>
