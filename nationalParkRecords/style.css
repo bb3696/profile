@@ -1,0 +1,154 @@
+body {
+  background: #0b1d2b;
+  color: white;
+  font-family: Outfit, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+  text-align: center;
+  min-height: 40px; /* 固定高度避免字体加载后抖动 */
+  margin-bottom: 40px;
+}
+
+.home {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.9rem;
+  font-weight: 100;
+  z-index: 10; /* 确保在其他内容上面 */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.park-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1a2b3c;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+}
+
+
+.park-card:hover {
+  transform: scale(1.05);
+}
+
+.park-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  /*filter: grayscale(100%) opacity(0.4);*/
+}
+
+.placeholder {
+  width: 100%;
+  height: 160px;
+  background-color: #33475b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 12px;
+}
+
+.park-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.6);
+  color: #888;
+  height: 36px;
+  display: flex;
+  align-items: center;   /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+a.park-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.park-link:hover {
+  text-decoration: underline;
+}
+
+.default-wrapper {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: flex-start; /* 向上对齐 */
+  justify-content: center;
+  padding-top: 10px; /* 微调顶部留白 */
+  background-color: #33475b;
+}
+
+.default-img {
+  width: auto;
+  height: auto;
+  opacity: 0.2;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 当鼠标移到整个卡片上，移除图片阴影 */
+.park-card:hover .card-img {
+  box-shadow: none;
+  transform: scale(1.02);
+}
+
+.img-section {
+  user-select: none;     /* 禁止选中头像区域任何内容 */
+  cursor: default;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.defaultimg-section {
+  user-select: none;     /* 禁止选中头像区域任何内容 */
+  cursor: default;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

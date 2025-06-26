@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Parks Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>National Parks I've Explored</h1>
+  <div class="home"><a class="park-link" href="D:/Java%20Practice/FrontEnd/profile/profile.html">Home</a></div>
+  <div class="grid fade-in"></div>
+  <script src="parks.js"></script>
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth;
+      const angle = Math.round(x * 360);
+      const container = document.querySelector("body");
+    if (container) {
+      container.style.background = `linear-gradient(${angle}deg, #0d1a26, #1f3b4d)`;
+    }
+    });
+  </script>
+</body>
+</html>
